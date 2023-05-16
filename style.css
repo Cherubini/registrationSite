@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     transition: all 0.2s ease-out;
+
 }
 
 body {
@@ -18,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .container {
@@ -311,6 +313,10 @@ button:active {
 
 /* LIST PAGE */
 
+.body-list {
+    height: 100vh;
+}
+
 .list-container {
     width: 97%;
     height: 98%;
@@ -322,25 +328,35 @@ button:active {
 }
 
 #box-list {
-    width: 540px;
-    height: 540px;
-    margin: 0px auto 0px;
+    width: 40%;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    right: 30vw;
+    
+    padding-top: 50px;
+}
+
+.user-box{
+    width: 460px;
+    height: 460px;
+    margin: 0px auto 60px;
     border-radius: 350px;
     background: linear-gradient(130deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0.6) 30%, rgba(9,9,121,1) 100%);
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.8);
-    overflow-y: scroll;
     padding: 20px;
-    position: relative;
-    bottom: 60px;
+    text-align: start;
 }
 
 h2 {
     font-size: 45px;
     color: rgb(245, 253, 255);
     text-shadow: 2px 2px 12px rgba(9,9,121,0.8);
+    text-align: center;
 }
 
-.user-box {
+/* .user-box {
     width: 100%;
     margin: auto;
     display: flex;
@@ -349,7 +365,7 @@ h2 {
     align-items: center;
     padding-bottom: 50px;
     margin: 40px 0px 40px;
-}
+} */
 
 .user {
     list-style: none;

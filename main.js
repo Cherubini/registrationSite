@@ -115,9 +115,9 @@ function createUser(){
 
     if(errorStr===''){
         const gender= gendermale.checked ? 'male': genderfemale.checked? 'female' : 'other';
-       const newUser = new User(username, name, surname, email, password, yob, _newsletter, gender, phonenumber);
+       const newUser = new User(username.value, name.value, surname.value, email.value, password.value, yob.value, _newsletter.checked, gender, phonenumber.value);
        newListOfUsers.addUser(newUser);
-       console.log(newUser);
+       console.log('newUser', newUser);
        console.log(newListOfUsers);
        UsersService.postUser(newUser);
    
