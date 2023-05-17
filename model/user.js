@@ -86,7 +86,7 @@ class User{
         };
     };
 
-    toDbModel() {
+    tiDbModel() {
         const dbModel = {
             userName: this._userName,
             name: this.name,

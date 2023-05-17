@@ -83,17 +83,6 @@ function createUser(){
     if(!emailRegex.test(email.value)){
        errorStr+=`${errorStr === '' ? 'Caro utente, l' : 'L'}a mail è incorretta `
     }
-
-    // if(gendermale) {
-    //     genderfemale = false;
-    //     genderother = false;
-    // } else if(genderfemale){
-    //     gendermale = false;
-    //     genderother = false;
-    // } else if(genderother){
-    //     gendermale = false;
-    //     genderfemale = false;
-    // }
    
     if (gendermale.checked) {
         if(genderfemale.checked || genderother.checked){
@@ -130,18 +119,23 @@ function createUser(){
        displayError.innerHTML = errorStr;
      }
           
-     name.value= '';
-     surname.value= '';
-     //gender.checked= false;
-     yob.value= '';
-     username.value= '';
-     password.value= '';
-     password_check.value= '';
-     email.value= '';
-     phonenumber.value= '';
+    name.value= '';
+    surname.value= '';
+    if(gendermale.checked) {
+        gendermale.checked = !gendermale.checked;
+    } else if(genderfemale.checked){
+        genderfemale.checked = !genderfemale.checked;
+    } else if(genderother.checked){
+        genderother.checked = !genderother.checked;
+    }
+    yob.value= '';
+    username.value= '';
+    password.value= '';
+    password_check.value= '';
+    email.value= '';
+    phonenumber.value= '';
    
-   
-   }
+}
    
 
    // /* * AGGIUNTE CHERUBINI **/
